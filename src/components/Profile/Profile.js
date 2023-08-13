@@ -17,11 +17,10 @@ export const Profile = props => {
     avatar,
     stats: { followers, views, likes },
   } = props;
-  console.log(props);
   return (
     <ProfileWrapper>
       <Description>
-        <Image src={avatar} alt="User avatar" class="avatar" />
+        <Image src={avatar} alt="User avatar"/>
         <Name>{username}</Name>
         <Text>@{tag}</Text>
         <Text>{location}</Text>
@@ -29,15 +28,15 @@ export const Profile = props => {
 
       <List>
         <ListItem>
-          <span class="label">Followers</span>
+          <span>Followers</span>
           <Quantity>{followers}</Quantity>
         </ListItem>
         <ListItem>
-          <span class="label">Views</span>
+          <span>Views</span>
           <Quantity>{views}</Quantity>
         </ListItem>
         <ListItem>
-          <span class="label">Likes</span>
+          <span>Likes</span>
           <Quantity>{likes}</Quantity>
         </ListItem>
       </List>
