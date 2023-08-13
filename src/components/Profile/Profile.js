@@ -1,4 +1,13 @@
-import { ProfileWrapper, Image } from './Profile.styled';
+import {
+  ProfileWrapper,
+  Description,
+  Image,
+  Name,
+  Text,
+  List,
+  ListItem,
+  Quantity
+} from './Profile.styled';
 
 export const Profile = props => {
   const {
@@ -11,27 +20,27 @@ export const Profile = props => {
   console.log(props);
   return (
     <ProfileWrapper>
-      <div class="description">
+      <Description>
         <Image src={avatar} alt="User avatar" class="avatar" />
-        <p class="name">{username}</p>
-        <p class="tag">@+{tag}</p>
-        <p class="location">{location}</p>
-      </div>
+        <Name>{username}</Name>
+        <Text>@{tag}</Text>
+        <Text>{location}</Text>
+      </Description>
 
-      <ul class="stats">
-        <li>
+      <List>
+        <ListItem>
           <span class="label">Followers</span>
-          <span class="quantity">{followers}</span>
-        </li>
-        <li>
+          <Quantity>{followers}</Quantity>
+        </ListItem>
+        <ListItem>
           <span class="label">Views</span>
-          <span class="quantity">{views}</span>
-        </li>
-        <li>
+          <Quantity>{views}</Quantity>
+        </ListItem>
+        <ListItem>
           <span class="label">Likes</span>
-          <span class="quantity">{likes}</span>
-        </li>
-      </ul>
+          <Quantity>{likes}</Quantity>
+        </ListItem>
+      </List>
     </ProfileWrapper>
   );
 };
