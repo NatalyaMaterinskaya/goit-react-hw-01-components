@@ -1,36 +1,32 @@
 import styled from 'styled-components';
 
 export const TransactionHistoryTable = styled.table`
-  display: flex;
-  flex-direction: column;
-  font-size: 20px;
-  width: 80%;
-  border: 1px solid black;
-  gap: 16px;
-  /* min-width: 500px;
-  border: 1px solid #ccbaba;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px; */
+  min-width: 800px;
+  text-align: center;
+  border-collapse: collapse;
 `;
 
 export const TableHead = styled.thead`
-
+  color: #ffffff;
+  font-weight: 600;
+  background-color: #48cedf;
+  text-transform: uppercase;
 `;
 
 export const TableBody = styled.tbody`
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  width: calc((100% - 2 * 24px) / 3);
+  color: #6d6565;
+  text-transform: capitalize;
 `;
 
 export const TableRow = styled.tr`
-  display: flex;
-  gap: 24px;
- 
+  font-size: 16px;
+
+  &:nth-child(even) {
+    background-color: #b0adad5c;
+  }
 `;
+
 export const TableData = styled.td`
-  display: flex;
-  flex-direction: column;
-  padding: 20px 44px;
+  padding: 16px 24px;
+  border: 1px solid #c2bcbc;
 `;
