@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import {
   ProfileWrapper,
   Description,
@@ -6,7 +8,7 @@ import {
   Text,
   List,
   ListItem,
-  Quantity
+  Quantity,
 } from './Profile.styled';
 
 export const Profile = props => {
@@ -20,7 +22,7 @@ export const Profile = props => {
   return (
     <ProfileWrapper>
       <Description>
-        <Image src={avatar} alt="User avatar"/>
+        <Image src={avatar} alt="User avatar" />
         <Name>{username}</Name>
         <Text>@{tag}</Text>
         <Text>{location}</Text>
@@ -42,4 +44,12 @@ export const Profile = props => {
       </List>
     </ProfileWrapper>
   );
+};
+
+Profile.propTypes = {
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.objectOf(PropTypes.number).isRequired,
 };
