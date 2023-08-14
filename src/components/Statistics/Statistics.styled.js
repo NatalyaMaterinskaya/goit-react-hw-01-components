@@ -26,7 +26,6 @@ export const Title = styled.h2`
 
 export const List = styled.ul`
   display: flex;
-
 `;
 
 export const ListItem = styled.li`
